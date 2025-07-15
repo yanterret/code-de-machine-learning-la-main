@@ -26,7 +26,7 @@ def initialisation(n1, n0, n2):
     
 # parameters in a dictionary 
 
-def fp(X, parameters):
+def fowardpropagation(X, parameters):
     
     W1 = parameters["W1"]
     b1 = parameters["b1"]
