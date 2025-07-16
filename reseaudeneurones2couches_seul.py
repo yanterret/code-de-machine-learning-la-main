@@ -18,9 +18,9 @@ def logloss(A,y):
 def initialisation(n1, n0, n2):
     
     m= Y.shape[1]
-    W1  = rd.randn(n1 , n0)*(1 / m)**(-1/2)
+    W1  = rd.randn(n1 , n0)*np.sqrt(1/m) #petits poids pour une plus garnde variation
     b1  = rd.randn(n1 , 1)
-    W2  = rd.randn(n2 , n1)*(1 / m)**(-1/2)
+    W2  = rd.randn(n2 , n1)*np.sqrt(1/m)
     b2  = rd.randn(n2 , 1)
     parameters={'W1':W1,"b1": b1,'W2':W2,"b2": b2}
     return parameters
