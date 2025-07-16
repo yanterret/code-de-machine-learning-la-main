@@ -6,8 +6,9 @@ from sklearn.datasets import  make_circles
 
 X, Y =  make_circles(n_samples=100, noise=0.1, factor=0.3, random_state=0)
 plt.scatter(X[:, 0], X[:, 1], c=Y, cmap='summer')
-Y = Y.reshape((1, Y.shape[0]))          # shape : (1, 100)
-X=X.T           # shape : (2, 100)
+Y = Y.reshape((Y.shape[0], 1))         
+X=X.T  # shape : (2, 100)
+Y=Y.T  # shape : (1, 100)
 
 # debug print(np.shape())
 
